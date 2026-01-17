@@ -4,6 +4,7 @@
 import { useFormState } from 'react-dom';
 import { submitContactForm, FormState } from '@/app/actions';
 import Link from 'next/link';
+import { Phone, Mail, Clock, MapPin } from 'lucide-react';
 
 // ✅ Accept state as FormState | null
 function SuccessMessage({ state }: { state: FormState | null }) {
@@ -25,7 +26,6 @@ function SuccessMessage({ state }: { state: FormState | null }) {
 }
 
 export default function ContactPage() {
-  // ✅ state is FormState | null
   const [state, formAction] = useFormState(submitContactForm, null);
 
   return (
@@ -48,17 +48,29 @@ export default function ContactPage() {
       {/* Main Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
-          <SuccessMessage state={state} /> {/* ✅ Now matches type */}
+          <SuccessMessage state={state} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6">Get in Touch</h3>
               <div className="space-y-4 text-gray-700">
-                <p>📞 <strong>Call Us:</strong> +254 725 398 764</p>
-                <p>✉️ <strong>Email:</strong> info@sipedo.co.ke</p>
-                <p>🕒 <strong>Hours:</strong> Monday–Saturday, 7:00 AM – 6:00 PM</p>
-                <p>📍 <strong>Service Area:</strong> Nairobi, Kiambu, Kajiado, Thika</p>
+                <div className="flex items-center gap-2">
+                  <Phone size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Call Us:</strong> +254 725 398 764</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Email:</strong> info@sipedo.co.ke</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Hours:</strong> Monday–Saturday, 7:00 AM – 6:00 PM</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Service Area:</strong> Nairobi, Kiambu, Kajiado, Thika</span>
+                </div>
               </div>
 
               <div className="mt-8">
