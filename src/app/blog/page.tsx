@@ -7,42 +7,42 @@ const blogPosts = [
     title: '5 Signs You Need Professional Pest Control in Nairobi',
     excerpt: 'Early warning signs of rodent and insect infestations — and what to do next.',
     date: 'January 10, 2026',
-    image: 'https://images.unsplash.com/photo-1584438784913-76ef476c6f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/7216d4d56abf902a2aae1cd81d6daebd4190eac7/fumi.jpg'
   },
   {
     id: 'post-construction-cleaning-essential',
     title: 'Why Post-Construction Cleaning Is Essential in Nairobi After Renovation',
     excerpt: 'Health risks of construction dust and why professional cleanup is non-negotiable.',
     date: 'December 28, 2025',
-    image: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/5f3edb8ec24efe3c9d540a713b2ea335e8e63b91/pexels-tima-miroshnichenko-6195104.jpg'
   },
   {
     id: 'sofa-cleaning-tips',
     title: '3 Sofa Cleaning Mistakes to Avoid in Nairobi Homes',
     excerpt: 'Common DIY errors that damage upholstery — and the safe alternative.',
     date: 'December 15, 2025',
-    image: 'https://images.unsplash.com/photo-1600879995428-7e8a8c6b5a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/526dac887b573e38a17b7c03620eff41ca1d330c/sofa%202.jpg'
   },
   {
     id: 'eco-friendly-pest-control',
     title: 'Eco-Friendly Pest Control Methods Safe for Kids and Pets in Nairobi',
     excerpt: 'Non-toxic, effective solutions for cockroaches, bedbugs, and more.',
     date: 'November 30, 2025',
-    image: 'https://images.unsplash.com/photo-1622288432343-4d1bb4a0a8c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/fumigation.jpg'
   },
   {
     id: 'carpet-cleaning-benefits',
     title: '5 Health Benefits of Professional Carpet Cleaning in Nairobi',
     excerpt: 'How deep cleaning improves air quality, reduces allergies, and extends carpet life.',
     date: 'November 12, 2025',
-    image: 'https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/5fb4adcb1325783bf75c5dca18af625225a6e292/IMG-20260117-WA0009.jpg'
   },
   {
     id: 'bedbug-treatment-nairobi',
     title: 'How to Get Rid of Bedbugs in Nairobi: Fast, Discreet & Guaranteed',
     excerpt: 'Emergency bedbug extermination with heat treatment and follow-up guarantee.',
     date: 'October 25, 2025',
-    image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/bed-bugs-control-services.jpg'
   }
 ];
 
@@ -52,9 +52,9 @@ export default function BlogPage() {
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1581578021424-3f1d6020b775?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
+          style={{ backgroundImage: "url('https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Cleaning & Pest Control Tips for Nairobi</h1>
           <p className="text-xl max-w-2xl mx-auto">

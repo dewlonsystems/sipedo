@@ -91,13 +91,13 @@ export default function HomePage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/b14dc739328e0746a45ea4850b99000103b7e428/pexels-matilda-wormwood-4098786.jpg"
+            src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/9632880bae8d65993d5d208701d881d14745307b/office-cleaning-services-in-Nairobi-.jpg"
             alt="Sipedo Services - Professional Cleaning & Pest Control in Nairobi"
             className="w-full h-full object-cover"
           />
         </div>
         {/* Light grey overlay — subtle and professional */}
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-20 z-10" />
+        <div className="absolute inset-0 bg-black/65 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Cleaning & Pest Control in Nairobi

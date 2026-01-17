@@ -48,12 +48,12 @@ export default function PestControlPage() {
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1584438784913-76ef476c6f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/fumigation.jpg"
             alt="Professional pest control services in Nairobi"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-gray-900 bg-opacity-20 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Pest Control Services</h1>
           <p className="text-xl max-w-2xl mx-auto">

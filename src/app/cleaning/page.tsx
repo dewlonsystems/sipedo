@@ -54,9 +54,9 @@ export default function CleaningServicesPage() {
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
+          style={{ backgroundImage: "url('https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg')" }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Cleaning Services</h1>
           <p className="text-xl max-w-2xl mx-auto">
