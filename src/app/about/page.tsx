@@ -42,18 +42,26 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* Updated Service Areas Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-primary mb-6 text-center">Our Service Areas</h2>
             <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-8">
               We proudly provide reliable, affordable services across Nairobi County and surrounding regions.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {['Nairobi', 'Westlands', 'Karen', 'Lang’ata', 'Kiambu', 'Thika', 'Ruiru', 'Kajiado', 'Machakos'].map((area) => (
-                <span key={area} className="bg-primary text-white px-4 py-2 rounded-full font-medium">
+              {[
+                'Kilimani', 'Kileleshwa', 'Lavington', 'Rongai', 'Eastleigh',
+                'South B', 'South C', 'Katani', 'Athi River', 'Kitengela',
+                'Westlands', 'Karen', 'Thika', 'Kiambu', 'Kajiado'
+              ].map((area) => (
+                <span key={area} className="bg-primary text-white px-4 py-2 rounded-full font-medium whitespace-nowrap">
                   {area}
                 </span>
               ))}
             </div>
+            <p className="text-center mt-6 text-gray-600">
+              Don’t see your neighborhood? <Link href="/contact" className="text-primary font-medium underline hover:text-accent">Let us know</Link> — we may already serve your area!
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">

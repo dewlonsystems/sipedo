@@ -1,7 +1,7 @@
 // src/app/contact/page.tsx
 'use client';
 
-import { useFormState } from 'react-dom';
+import { useActionState } from 'react'; // ✅ Changed import
 import { submitContactForm, FormState } from '@/app/actions';
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
@@ -26,7 +26,8 @@ function SuccessMessage({ state }: { state: FormState | null }) {
 }
 
 export default function ContactPage() {
-  const [state, formAction] = useFormState(submitContactForm, null);
+  // ✅ Renamed hook usage
+  const [state, formAction] = useActionState(submitContactForm, null);
 
   return (
     <>
