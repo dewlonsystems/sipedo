@@ -35,7 +35,7 @@ export default function ServicesPage() {
               <div className="bg-gray-bg rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow h-full">
                 <div className="h-56 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg" 
                     alt="Professional cleaning services in Nairobi" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -57,7 +57,7 @@ export default function ServicesPage() {
               <div className="bg-gray-bg rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow h-full">
                 <div className="h-56 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                    src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/fumigation.jpg" 
                     alt="Pest control services near me in Nairobi" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

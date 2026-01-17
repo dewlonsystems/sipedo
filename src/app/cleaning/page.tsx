@@ -7,43 +7,43 @@ const cleaningServices = [
     id: 'sofa-cleaning',
     title: 'Sofa Cleaning',
     description: 'Deep cleaning for fabric and leather sofas using eco-friendly solutions that remove stains, odors, and allergens.',
-    image: 'https://images.unsplash.com/photo-1600879995428-7e8a8c6b5a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/526dac887b573e38a17b7c03620eff41ca1d330c/sofa%202.jpg'
   },
   {
     id: 'office-cleaning',
     title: 'Office Cleaning',
     description: 'Daily, weekly, or one-time professional cleaning for offices of all sizes across Nairobi.',
-    image: 'https://images.unsplash.com/photo-1581578021424-3f1d6020b775?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg'
   },
   {
     id: 'carpet-cleaning',
     title: 'Carpet Cleaning',
     description: 'Steam and dry cleaning methods to restore carpets to like-new condition, removing dirt, bacteria, and odors.',
-    image: 'https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/75ebdc334f6f5683d3df4c16e0eaede76fa09a17/images.jpg'
   },
   {
     id: 'mattress-cleaning',
     title: 'Mattress Cleaning',
     description: 'Hygienic deep cleaning to eliminate dust mites, sweat, and allergens from your mattress for better sleep health.',
-    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/526dac887b573e38a17b7c03620eff41ca1d330c/mattress.jpg'
   },
   {
     id: 'car-interior',
     title: 'Car Interior Cleaning',
     description: 'Professional detailing of car seats, mats, dashboards, and upholstery to restore freshness and cleanliness.',
-    image: 'https://images.unsplash.com/photo-1553928980-2e043e5e9d0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/ba09a39492141a1e46a816572ec101baca91fb0d/Car-Interior-Cleaning-in-Pune.jpg'
   },
   {
     id: 'post-construction',
     title: 'Post-Construction Cleaning',
     description: 'Thorough cleanup after building or renovation — removing dust, debris, paint splatters, and more.',
-    image: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/5f3edb8ec24efe3c9d540a713b2ea335e8e63b91/pexels-tima-miroshnichenko-6195104.jpg'
   },
   {
     id: 'laundry-dry-cleaning',
     title: 'Laundry & Dry Cleaning',
     description: 'Convenient pickup and delivery of laundry and dry cleaning services for homes and businesses in Nairobi.',
-    image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/75ebdc334f6f5683d3df4c16e0eaede76fa09a17/images.jpg'
   }
 ];
 

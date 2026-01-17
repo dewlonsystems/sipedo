@@ -185,7 +185,7 @@ export default function HomePage() {
 
             <div className="bg-gray-bg p-6 rounded-lg shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1581578021424-3f1d6020b775?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg" 
                 alt="Office cleaning" 
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
@@ -200,7 +200,7 @@ export default function HomePage() {
 
             <div className="bg-gray-bg p-6 rounded-lg shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1600879995428-7e8a8c6b5a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/fumigation.jpg" 
                 alt="Pest control" 
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
@@ -250,12 +250,12 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center mb-12">Our Past Work</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'https://images.unsplash.com/photo-1600879995428-7e8a8c6b5a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1581578021424-3f1d6020b775?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1553928980-2e043e5e9d0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+              'https://raw.githubusercontent.com/dewlonsystems/sipedopics/7216d4d56abf902a2aae1cd81d6daebd4190eac7/our%20wo.jpg',
+              'https://raw.githubusercontent.com/dewlonsystems/sipedopics/7216d4d56abf902a2aae1cd81d6daebd4190eac7/fumi.jpg',
+              'https://raw.githubusercontent.com/dewlonsystems/sipedopics/7216d4d56abf902a2aae1cd81d6daebd4190eac7/our%205.jpg',
+              'https://raw.githubusercontent.com/dewlonsystems/sipedopics/7216d4d56abf902a2aae1cd81d6daebd4190eac7/our%204.jpg',
+              'https://raw.githubusercontent.com/dewlonsystems/sipedopics/7216d4d56abf902a2aae1cd81d6daebd4190eac7/our%203.jpg',
+              'https://raw.githubusercontent.com/dewlonsystems/sipedopics/526dac887b573e38a17b7c03620eff41ca1d330c/mattress.jpg'
             ].map((img, i) => (
               <div key={i} className="rounded-lg overflow-hidden shadow-md">
                 <img src={img} alt={`Project ${i + 1}`} className="w-full h-64 object-cover" />

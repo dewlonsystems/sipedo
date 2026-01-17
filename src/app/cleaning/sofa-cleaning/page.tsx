@@ -4,7 +4,7 @@ import Link from 'next/link';
 const serviceData = {
   title: "Sofa Cleaning",
   category: "Cleaning Services",
-  heroImage: "https://images.unsplash.com/photo-1600879995428-7e8a8c6b5a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80",
+  heroImage: "https://raw.githubusercontent.com/dewlonsystems/sipedopics/526dac887b573e38a17b7c03620eff41ca1d330c/sofa%202.jpg",
   description: "Deep cleaning for fabric and leather sofas in Nairobi using eco-friendly solutions that remove stains, odors, and allergens.",
   content: `
     <p>Your sofa is one of the most used pieces of furniture in your home — and it shows. At Sipedo Services, we specialize in professional sofa cleaning that restores freshness, removes stubborn stains, and eliminates hidden allergens.</p>
