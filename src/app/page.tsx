@@ -131,7 +131,7 @@ export default function HomePage() {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1581578021424-3f1d6020b775?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/b14dc739328e0746a45ea4850b99000103b7e428/pexels-matilda-wormwood-4098786.jpg" 
               alt="Sipedo cleaning team at work" 
               className="rounded-lg shadow-md w-full"
             />
@@ -144,7 +144,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <img 
-              src="https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/75ebdc334f6f5683d3df4c16e0eaede76fa09a17/images.jpg" 
               alt="Professional pest control service" 
               className="rounded-lg shadow-md w-full"
             />
@@ -170,7 +170,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-gray-bg p-6 rounded-lg shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5f3edb8ec24efe3c9d540a713b2ea335e8e63b91/pexels-tima-miroshnichenko-6195104.jpg" 
                 alt="Carpet cleaning" 
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
