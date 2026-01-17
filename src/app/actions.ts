@@ -12,13 +12,14 @@ export type FormState = {
 
 // ✅ Use _prevState to suppress "unused" warning
 export async function submitContactForm(
-  _prevState: FormState | null, // ← prefixed with _ to indicate intentional unused
+  _prevState: FormState | null,
   formData: FormData
 ): Promise<FormState> {
   const name = formData.get('name') as string;
   const phone = formData.get('phone') as string;
   const service = formData.get('service') as string;
   const message = formData.get('message') as string;
+  const location = formData.get('location') as string; // ✅ Added location
 
   if (!name || !phone || !service) {
     return { message: 'Please fill in all required fields.' };
@@ -33,6 +34,7 @@ export async function submitContactForm(
         <h2>New Service Request</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Location:</strong> ${location || '—'}</p> <!-- ✅ Included in email -->
         <p><strong>Service:</strong> ${service}</p>
         <p><strong>Message:</strong> ${message || '—'}</p>
       `,

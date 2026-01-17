@@ -1,7 +1,7 @@
 // src/app/contact/page.tsx
 'use client';
 
-import { useActionState } from 'react'; // ✅ Changed import
+import { useActionState } from 'react'; // Fixed: renamed from useFormState
 import { submitContactForm, FormState } from '@/app/actions';
 import Link from 'next/link';
 import { Phone, Mail, Clock, MapPin } from 'lucide-react';
@@ -26,7 +26,6 @@ function SuccessMessage({ state }: { state: FormState | null }) {
 }
 
 export default function ContactPage() {
-  // ✅ Renamed hook usage
   const [state, formAction] = useActionState(submitContactForm, null);
 
   return (
@@ -70,7 +69,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin size={18} className="text-gray-700 flex-shrink-0" />
-                  <span><strong>Service Area:</strong> Nairobi, Kiambu, Kajiado, Thika</span>
+                  <span><strong>Service Area:</strong> Kilimani, Kileleshwa, Lavington, Rongai, Eastleigh, South B, South C, Katani, Athi River, Kitengela & more</span>
                 </div>
               </div>
 
@@ -82,7 +81,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Contact Form — WITH LOCATION FIELD */}
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6">Send a Message</h3>
               <form action={formAction} className="space-y-4">
@@ -106,6 +105,16 @@ export default function ContactPage() {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
                     placeholder="+254 7XX XXX XXX"
                     required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="location" className="block text-gray-700 mb-1">Location (Optional)</label>
+                  <input 
+                    type="text" 
+                    id="location" 
+                    name="location"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                    placeholder="e.g., Kilimani, Rongai, Kitengela..."
                   />
                 </div>
                 <div>

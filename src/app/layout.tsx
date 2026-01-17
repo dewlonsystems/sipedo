@@ -4,6 +4,7 @@ import './globals.css';
 import ContactBar from '@/app/components/ContactBar';
 import Navbar from '@/app/components/Navbar';
 import Footer from '@/app/components/Footer';
+import FloatingActions from '@/app/components/FloatingActions';
 
 export const metadata: Metadata = {
   title: 'Sipedo Services | Professional Cleaning & Pest Control in Nairobi',
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <FloatingActions />
       </body>
     </html>
   );
