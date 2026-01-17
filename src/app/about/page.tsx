@@ -83,7 +83,7 @@ export default function AboutPage() {
               <div className="space-y-3 text-gray-700">
                 <div className="flex items-center gap-2">
                   <Phone size={18} className="text-gray-700 flex-shrink-0" />
-                  <span><strong>Phone:</strong> +254 700 000 000</span>
+                  <span><strong>Phone:</strong> +254 725 398 764</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={18} className="text-gray-700 flex-shrink-0" />
@@ -101,19 +101,21 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="bg-gray-bg p-6 rounded-lg text-center">
-            <h3 className="text-xl font-bold mb-4">Find Us</h3>
-            <p className="text-gray-600 mb-4">We serve your area! Here’s a general location map.</p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.803720305341!2d36.82221227493811!3d-1.2833333333333333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f115e1d1e1e1d%3A0x1e1d1e1d1e1d1e1d!2sNairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske"
-              width="100%"
-              height="300"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              title="Sipedo Services Location"
-            ></iframe>
+          {/* Updated Map Section */}
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-xl font-bold mb-4 text-center">Our Location</h3>
+            <div className="aspect-w-16 aspect-h-9 w-full max-w-4xl mx-auto overflow-hidden rounded-md shadow-md">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8112026818358!2d36.825583773207576!3d-1.2873905356236484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11263b1b731f%3A0x9dd2b84aba90a34f!2sInformation%20House%20-%20A%201!5e0!3m2!1sen!2ske!4v1768666580465!5m2!1sen!2ske"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Sipedo Services – Information House, Nairobi"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>

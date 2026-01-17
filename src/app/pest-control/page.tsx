@@ -7,37 +7,37 @@ const pestControlServices = [
     id: 'bedbugs',
     title: 'Bedbug Control',
     description: 'Fast, discreet, and effective bedbug extermination with heat treatment and follow-up guarantee.',
-    image: 'https://images.unsplash.com/photo-1584438784913-76ef476c6f1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/bed-bugs-control-services.jpg'
   },
   {
     id: 'cockroaches',
     title: 'Cockroach Control',
     description: 'Permanent elimination of cockroaches using gel baits and residual barriers — safe for kitchens.',
-    image: 'https://images.unsplash.com/photo-1622288432343-4d1bb4a0a8c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/cockroach.jpeg'
   },
   {
     id: 'mosquitoes',
     title: 'Mosquito Control',
     description: 'Outdoor fogging and larvicide treatment to prevent malaria, dengue, and Zika in Nairobi homes.',
-    image: 'https://images.unsplash.com/photo-1617830083435-6a6e4c1b6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/mosq.jpg'
   },
   {
     id: 'fleas',
     title: 'Flea Control',
     description: 'Complete flea eradication for homes and pets using growth inhibitors and eco-friendly sprays.',
-    image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/flea-control.jpg'
   },
   {
     id: 'termites',
     title: 'Termite Control',
     description: 'Professional inspection and colony elimination using baiting systems and soil treatment.',
-    image: 'https://images.unsplash.com/photo-1617830083435-6a6e4c1b6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/INSECTEK-WEB-SERVICES-TERMITES-1024x1022.jpg'
   },
   {
     id: 'rats',
     title: 'Rat & Rodent Control',
     description: 'Humane trapping, exclusion, and sanitation to eliminate rats and mice from your property.',
-    image: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/rat-control-solution.jpg'
   }
 ];
 
