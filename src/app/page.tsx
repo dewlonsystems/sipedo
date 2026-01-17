@@ -224,23 +224,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Areas */}
+      {/* Service Areas — UPDATED WITH YOUR REQUESTED NEIGHBORHOODS */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Where We Offer Services</h2>
           <p className="text-xl max-w-3xl mx-auto mb-8">
-            We proudly serve Nairobi and surrounding counties with reliable, affordable cleaning and pest control.
+            We proudly serve Nairobi and surrounding areas with reliable, affordable cleaning and pest control.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Nairobi', 'Kiambu', 'Kajiado', 'Machakos', 'Thika', 'Ruiru', 'Kitengela'].map((area) => (
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            {[
+              'Kilimani', 'Kileleshwa', 'Lavington', 'Rongai', 'Eastleigh',
+              'South B', 'South C', 'Katani', 'Athi River', 'Kitengela',
+              'Westlands', 'Karen', 'Thika', 'Kiambu', 'Kajiado'
+            ].map((area) => (
               <span 
                 key={area} 
-                className="bg-primary px-4 py-2 rounded-full font-medium"
+                className="bg-primary px-4 py-2 rounded-full font-medium whitespace-nowrap"
               >
                 {area}
               </span>
             ))}
           </div>
+          <p className="mt-6 text-lg opacity-90">
+            Don’t see your area? <Link href="/contact" className="underline hover:text-accent">Contact us</Link> — we may still serve you!
+          </p>
         </div>
       </section>
 

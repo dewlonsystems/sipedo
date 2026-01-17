@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className="flex justify-between items-center mb-8">
             <Link href="/" onClick={closeMenu} className="inline-block">
               <img
-                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5541e74deb22bcbb2c7a0b7424134a6e18218559/sipedo_77-removebg-preview.png"
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/8ea9c6d15b62f2a8f1e16d600bdf8181654d1818/sipedoNew.png"
                 alt="Sipedo Services"
                 className="h-8 w-auto"
               />
@@ -151,7 +151,7 @@ export default function Navbar() {
             {/* Logo - Desktop */}
             <Link href="/" className="inline-block">
               <img
-                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5541e74deb22bcbb2c7a0b7424134a6e18218559/sipedo_77-removebg-preview.png"
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/8ea9c6d15b62f2a8f1e16d600bdf8181654d1818/sipedoNew.png"
                 alt="Sipedo Services"
                 className="h-8 w-auto"
               />

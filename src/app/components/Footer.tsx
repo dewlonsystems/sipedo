@@ -14,17 +14,16 @@ export default function Footer() {
               Professional cleaning & pest control services across Nairobi and surrounding counties.
             </p>
             <div className="flex flex-col gap-1 text-gray-300">
-                <div className="flex items-center gap-2">
-                    <Phone size={16} />
-                    <span>+254 725 398 764</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <Mail size={16} />
-                        <span>info@sipedo.co.ke</span>
-                        </div>
-                        </div>               
-        </div>                 
-
+              <div className="flex items-center gap-2">
+                <Phone size={16} />
+                <span>+254 725 398 764</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={16} />
+                <span>info@sipedo.co.ke</span>
+              </div>
+            </div>               
+          </div>                 
 
           {/* Quick Links */}
           <div>
@@ -37,17 +36,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Cleaning Services */}
+          {/* Cleaning Services — FIXED */}
           <div>
             <h4 className="font-semibold mb-4">Cleaning Services</h4>
             <ul className="space-y-2 text-gray-300">
-              {['sofa', 'office', 'carpet', 'mattress', 'car interior', 'post construction', 'laundry'].map((s) => (
-                <li key={s}>
+              {[
+                { name: 'Sofa', slug: 'sofa-cleaning' },
+                { name: 'Office', slug: 'office-cleaning' },
+                { name: 'Carpet', slug: 'carpet-cleaning' },
+                { name: 'Mattress', slug: 'mattress-cleaning' },
+                { name: 'Car Interior', slug: 'car-interior' },
+                { name: 'Post Construction', slug: 'post-construction' },
+                { name: 'Laundry & Dry Cleaning', slug: 'laundry-dry-cleaning' }
+              ].map((service) => (
+                <li key={service.slug}>
                   <Link 
-                    href={`/cleaning/${s.replace(/\s+/g, '-')}-cleaning`} 
-                    className="hover:text-primary transition capitalize"
+                    href={`/cleaning/${service.slug}`} 
+                    className="hover:text-primary transition"
                   >
-                    {s} cleaning
+                    {service.name}
                   </Link>
                 </li>
               ))}
