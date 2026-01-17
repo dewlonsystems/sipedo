@@ -2,26 +2,22 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import { submitContactForm } from '@/app/actions';
-import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { submitContactForm, FormState } from '@/app/actions';
 import Link from 'next/link';
 
-// Optional: show success message
-function SuccessMessage() {
-  const searchParams = useSearchParams();
-  const success = searchParams.get('success');
-  
-  useEffect(() => {
-    if (success) {
-      window.scrollTo(0, 0);
-    }
-  }, [success]);
-
-  if (success) {
+// ✅ Accept state as FormState | null
+function SuccessMessage({ state }: { state: FormState | null }) {
+  if (state?.success) {
     return (
-      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-8">
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg mb-8 text-center">
         Thank you! We'll call you within 1 hour.
+      </div>
+    );
+  }
+  if (state?.message) {
+    return (
+      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-8">
+        {state.message}
       </div>
     );
   }
@@ -29,6 +25,7 @@ function SuccessMessage() {
 }
 
 export default function ContactPage() {
+  // ✅ state is FormState | null
   const [state, formAction] = useFormState(submitContactForm, null);
 
   return (
@@ -48,107 +45,102 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Main Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <SuccessMessage />
-          {state?.message && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-8">
-              {state.message}
-            </div>
-          )}
-        </div>
+        <div className="max-w-4xl mx-auto">
+          <SuccessMessage state={state} /> {/* ✅ Now matches type */}
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
-            <div className="space-y-4 text-gray-700">
-              <p>📞 <strong>Call Us:</strong> +254 700 000 000</p>
-              <p>✉️ <strong>Email:</strong> info@sipedo.co.ke</p>
-              <p>🕒 <strong>Hours:</strong> Monday–Saturday, 7:00 AM – 6:00 PM</p>
-              <p>📍 <strong>Service Area:</strong> Nairobi, Kiambu, Kajiado, Thika</p>
-            </div>
-
-            <div className="mt-8">
-              <h4 className="font-bold mb-3">Emergency Pest Control?</h4>
-              <p className="text-gray-700">
-                Call directly for same-day bedbug, rat, or cockroach emergencies.
-              </p>
-            </div>
-          </div>
-
-          {/* Working Contact Form */}
-          <div>
-            <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-            <form action={formAction} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-gray-700 mb-1">Name *</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                  placeholder="Your name"
-                  required
-                />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-6">Get in Touch</h3>
+              <div className="space-y-4 text-gray-700">
+                <p>📞 <strong>Call Us:</strong> +254 700 000 000</p>
+                <p>✉️ <strong>Email:</strong> info@sipedo.co.ke</p>
+                <p>🕒 <strong>Hours:</strong> Monday–Saturday, 7:00 AM – 6:00 PM</p>
+                <p>📍 <strong>Service Area:</strong> Nairobi, Kiambu, Kajiado, Thika</p>
               </div>
-              <div>
-                <label htmlFor="phone" className="block text-gray-700 mb-1">Phone Number *</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                  placeholder="+254 7XX XXX XXX"
-                  required
-                />
+
+              <div className="mt-8">
+                <h4 className="font-bold text-lg mb-3">Emergency Pest Control?</h4>
+                <p className="text-gray-700">
+                  Call directly for same-day bedbug, rat, or cockroach emergencies.
+                </p>
               </div>
-              <div>
-                <label htmlFor="service" className="block text-gray-700 mb-1">Service Needed *</label>
-                <select 
-                  id="service" 
-                  name="service"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                  required
+            </div>
+
+            {/* Contact Form */}
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-6">Send a Message</h3>
+              <form action={formAction} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 mb-1">Name *</label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-gray-700 mb-1">Phone Number *</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                    placeholder="+254 7XX XXX XXX"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="service" className="block text-gray-700 mb-1">Service Needed *</label>
+                  <select 
+                    id="service" 
+                    name="service"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                    required
+                  >
+                    <option value="">Select a service</option>
+                    <optgroup label="Cleaning Services">
+                      <option value="sofa cleaning">Sofa Cleaning</option>
+                      <option value="carpet cleaning">Carpet Cleaning</option>
+                      <option value="office cleaning">Office Cleaning</option>
+                      <option value="mattress cleaning">Mattress Cleaning</option>
+                      <option value="car interior">Car Interior</option>
+                      <option value="post construction">Post-Construction</option>
+                      <option value="laundry">Laundry & Dry Cleaning</option>
+                    </optgroup>
+                    <optgroup label="Pest Control">
+                      <option value="bedbugs">Bedbugs</option>
+                      <option value="cockroaches">Cockroaches</option>
+                      <option value="mosquitoes">Mosquitoes</option>
+                      <option value="fleas">Fleas</option>
+                      <option value="termites">Termites</option>
+                      <option value="rats">Rats</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 mb-1">Message (Optional)</label>
+                  <textarea 
+                    id="message" 
+                    name="message"
+                    rows={3} 
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
+                    placeholder="Tell us about your needs..."
+                  ></textarea>
+                </div>
+                <button 
+                  type="submit" 
+                  className="w-full bg-accent hover:bg-orange-600 text-white font-bold py-3 px-4 rounded-lg shadow-md transition transform hover:scale-[1.02]"
                 >
-                  <option value="">Select a service</option>
-                  <optgroup label="Cleaning Services">
-                    <option value="sofa cleaning">Sofa Cleaning</option>
-                    <option value="carpet cleaning">Carpet Cleaning</option>
-                    <option value="office cleaning">Office Cleaning</option>
-                    <option value="mattress cleaning">Mattress Cleaning</option>
-                    <option value="car interior">Car Interior</option>
-                    <option value="post construction">Post-Construction</option>
-                    <option value="laundry">Laundry & Dry Cleaning</option>
-                  </optgroup>
-                  <optgroup label="Pest Control">
-                    <option value="bedbugs">Bedbugs</option>
-                    <option value="cockroaches">Cockroaches</option>
-                    <option value="mosquitoes">Mosquitoes</option>
-                    <option value="fleas">Fleas</option>
-                    <option value="termites">Termites</option>
-                    <option value="rats">Rats</option>
-                  </optgroup>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-gray-700 mb-1">Message (Optional)</label>
-                <textarea 
-                  id="message" 
-                  name="message"
-                  rows={3} 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:outline-none"
-                  placeholder="Tell us about your needs..."
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                className="w-full bg-accent hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition"
-              >
-                Request a Free Quote
-              </button>
-            </form>
+                  Request a Free Quote
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
