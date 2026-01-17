@@ -53,8 +53,13 @@ export default function Navbar() {
       >
         <div className="p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-8">
-            <Link href="/" className="text-xl font-bold text-primary" onClick={closeMenu}>
-              Sipedo
+            {/* Logo in mobile menu */}
+            <Link href="/" onClick={closeMenu} className="inline-block">
+              <img
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5541e74deb22bcbb2c7a0b7424134a6e18218559/sipedo_77-removebg-preview.png"
+                alt="Sipedo Services"
+                className="h-8 w-auto" // Adjust height as needed
+              />
             </Link>
             <button onClick={closeMenu} className="text-gray-600">
               <X size={24} />
@@ -62,7 +67,6 @@ export default function Navbar() {
           </div>
 
           <nav className="flex flex-col gap-1">
-            {/* Home */}
             <Link
               href="/"
               className="py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
@@ -71,7 +75,6 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* Cleaning Services - Collapsible */}
             <div>
               <button
                 className="w-full flex justify-between items-center py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
@@ -96,7 +99,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Pest Control - Collapsible */}
             <div>
               <button
                 className="w-full flex justify-between items-center py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
@@ -121,7 +123,6 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* About */}
             <Link
               href="/about"
               className="py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
@@ -130,7 +131,6 @@ export default function Navbar() {
               About
             </Link>
 
-            {/* Contact */}
             <Link
               href="/contact"
               className="py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
@@ -146,15 +146,19 @@ export default function Navbar() {
       <header className="bg-white shadow-sm sticky top-8 z-40 lg:top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="text-xl font-bold text-primary">
-              Sipedo
+            {/* Logo - Desktop */}
+            <Link href="/" className="inline-block">
+              <img
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5541e74deb22bcbb2c7a0b7424134a6e18218559/sipedo_77-removebg-preview.png"
+                alt="Sipedo Services"
+                className="h-8 w-auto" // ~32px tall — adjust if needed
+              />
             </Link>
 
             {/* Desktop Menu */}
             <nav className="hidden lg:flex items-center space-x-8">
               <Link href="/" className="font-medium hover:text-primary transition">Home</Link>
 
-              {/* Cleaning Services Dropdown */}
               <div className="relative group">
                 <button className="font-medium hover:text-primary transition flex items-center gap-1">
                   Cleaning Services
@@ -172,7 +176,6 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Pest Control Dropdown */}
               <div className="relative group">
                 <button className="font-medium hover:text-primary transition flex items-center gap-1">
                   Pest Control

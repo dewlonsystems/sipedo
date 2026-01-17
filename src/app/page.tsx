@@ -69,7 +69,7 @@ export default function HomePage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  // Blog preview data (you'll replace with real CMS later)
+  // Blog preview data
   const blogPosts = [
     {
       id: 1,
@@ -87,13 +87,17 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section — FIXED TO SHOW IMAGE CLEARLY */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600879995428-7e8a8c6b5a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')" }}
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/b14dc739328e0746a45ea4850b99000103b7e428/pexels-matilda-wormwood-4098786.jpg"
+            alt="Sipedo Services - Professional Cleaning & Pest Control in Nairobi"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        {/* Light grey overlay — subtle and professional */}
+        <div className="absolute inset-0 bg-gray-900 bg-opacity-20 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Cleaning & Pest Control in Nairobi
@@ -164,7 +168,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {/* Cleaning Services Preview */}
             <div className="bg-gray-bg p-6 rounded-lg shadow-sm">
               <img 
                 src="https://images.unsplash.com/photo-1611080626721-8ec568568fdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
