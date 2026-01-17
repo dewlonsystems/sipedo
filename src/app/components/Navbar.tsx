@@ -53,12 +53,11 @@ export default function Navbar() {
       >
         <div className="p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-8">
-            {/* Logo in mobile menu */}
             <Link href="/" onClick={closeMenu} className="inline-block">
               <img
-                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/8ea9c6d15b62f2a8f1e16d600bdf8181654d1818/sipedoNew.png"
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5541e74deb22bcbb2c7a0b7424134a6e18218559/sipedo_77-removebg-preview.png"
                 alt="Sipedo Services"
-                className="h-8 w-auto" // Adjust height as needed
+                className="h-8 w-auto"
               />
             </Link>
             <button onClick={closeMenu} className="text-gray-600">
@@ -143,15 +142,18 @@ export default function Navbar() {
       </div>
 
       {/* Desktop Navigation */}
-      <header className="bg-white shadow-sm sticky top-8 z-40 lg:top-0">
+      <header 
+        className="bg-white shadow-sm sticky z-40"
+        style={{ top: 'var(--contact-bar-height)' }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo - Desktop */}
             <Link href="/" className="inline-block">
               <img
-                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/8ea9c6d15b62f2a8f1e16d600bdf8181654d1818/sipedoNew.png"
+                src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/5541e74deb22bcbb2c7a0b7424134a6e18218559/sipedo_77-removebg-preview.png"
                 alt="Sipedo Services"
-                className="h-8 w-auto" // ~32px tall — adjust if needed
+                className="h-8 w-auto"
               />
             </Link>
 

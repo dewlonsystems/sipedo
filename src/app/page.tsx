@@ -97,7 +97,7 @@ export default function HomePage() {
           />
         </div>
         {/* Light grey overlay — subtle and professional */}
-        <div className="absolute inset-0 bg-black/65 z-10" />
+        <div className="absolute inset-0 bg-black/75 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Professional Cleaning & Pest Control in Nairobi

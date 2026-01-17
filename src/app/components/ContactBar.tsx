@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 export default function ContactBar() {
   return (
-    <div className="bg-primary text-white text-sm py-2.5 px-4 sticky top-0 z-50 shadow-sm">
+    <div 
+      className="bg-primary text-white text-sm py-2.5 px-4 sticky top-0 z-50 shadow-sm"
+      style={{ height: 'var(--contact-bar-height)' }}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Desktop: all in one line */}
         <div className="hidden md:flex items-center justify-between">
