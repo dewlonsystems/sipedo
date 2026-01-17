@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 const cleaningServices = [
   'sofa-cleaning',
@@ -26,6 +26,14 @@ const pestControlServices = [
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cleaningOpen, setCleaningOpen] = useState(false);
+  const [pestOpen, setPestOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMobileMenuOpen(false);
+    setCleaningOpen(false);
+    setPestOpen(false);
+  };
 
   return (
     <>
@@ -33,7 +41,7 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-40 z-40 lg:hidden"
-          onClick={() => setMobileMenuOpen(false)}
+          onClick={closeMenu}
         />
       )}
 
@@ -45,53 +53,91 @@ export default function Navbar() {
       >
         <div className="p-6 flex flex-col h-full">
           <div className="flex justify-between items-center mb-8">
-            <Link href="/" className="text-xl font-bold text-primary" onClick={() => setMobileMenuOpen(false)}>
+            <Link href="/" className="text-xl font-bold text-primary" onClick={closeMenu}>
               Sipedo
             </Link>
-            <button onClick={() => setMobileMenuOpen(false)} className="text-gray-600">
+            <button onClick={closeMenu} className="text-gray-600">
               <X size={24} />
             </button>
           </div>
 
-          <nav className="flex flex-col gap-4">
-            <Link href="/" className="py-2" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-            
-            {/* Cleaning Services Dropdown */}
+          <nav className="flex flex-col gap-1">
+            {/* Home */}
+            <Link
+              href="/"
+              className="py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
+              onClick={closeMenu}
+            >
+              Home
+            </Link>
+
+            {/* Cleaning Services - Collapsible */}
             <div>
-              <span className="font-medium">Cleaning Services</span>
-              <div className="ml-3 mt-2 space-y-2">
-                {cleaningServices.map((service) => (
-                  <Link
-                    key={service}
-                    href={`/cleaning/${service.replace(/\s+/g, '-')}`}
-                    className="block py-1 text-gray-600 hover:text-primary"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
-                  </Link>
-                ))}
-              </div>
+              <button
+                className="w-full flex justify-between items-center py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
+                onClick={() => setCleaningOpen(!cleaningOpen)}
+              >
+                <span>Cleaning Services</span>
+                {cleaningOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+              </button>
+              {cleaningOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {cleaningServices.map((service) => (
+                    <Link
+                      key={service}
+                      href={`/cleaning/${service}`}
+                      className="block py-2 px-2 text-gray-600 hover:text-primary rounded"
+                      onClick={closeMenu}
+                    >
+                      {service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Pest Control Dropdown */}
+            {/* Pest Control - Collapsible */}
             <div>
-              <span className="font-medium">Pest Control</span>
-              <div className="ml-3 mt-2 space-y-2">
-                {pestControlServices.map((service) => (
-                  <Link
-                    key={service}
-                    href={`/pest-control/${service.replace(/\s+/g, '-')}`}
-                    className="block py-1 text-gray-600 hover:text-primary"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
-                  </Link>
-                ))}
-              </div>
+              <button
+                className="w-full flex justify-between items-center py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
+                onClick={() => setPestOpen(!pestOpen)}
+              >
+                <span>Pest Control</span>
+                {pestOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+              </button>
+              {pestOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {pestControlServices.map((service) => (
+                    <Link
+                      key={service}
+                      href={`/pest-control/${service}`}
+                      className="block py-2 px-2 text-gray-600 hover:text-primary rounded"
+                      onClick={closeMenu}
+                    >
+                      {service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
-            <Link href="/about" className="py-2" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <Link href="/contact" className="py-2" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            {/* About */}
+            <Link
+              href="/about"
+              className="py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
+              onClick={closeMenu}
+            >
+              About
+            </Link>
+
+            {/* Contact */}
+            <Link
+              href="/contact"
+              className="py-3 px-2 font-medium text-gray-800 hover:text-primary rounded"
+              onClick={closeMenu}
+            >
+              Contact
+            </Link>
           </nav>
         </div>
       </div>
@@ -100,7 +146,6 @@ export default function Navbar() {
       <header className="bg-white shadow-sm sticky top-8 z-40 lg:top-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <Link href="/" className="text-xl font-bold text-primary">
               Sipedo
             </Link>
@@ -118,7 +163,7 @@ export default function Navbar() {
                   {cleaningServices.map((service) => (
                     <Link
                       key={service}
-                      href={`/cleaning/${service.replace(/\s+/g, '-')}`}
+                      href={`/cleaning/${service}`}
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary"
                     >
                       {service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
@@ -136,7 +181,7 @@ export default function Navbar() {
                   {pestControlServices.map((service) => (
                     <Link
                       key={service}
-                      href={`/pest-control/${service.replace(/\s+/g, '-')}`}
+                      href={`/pest-control/${service}`}
                       className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary"
                     >
                       {service.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}

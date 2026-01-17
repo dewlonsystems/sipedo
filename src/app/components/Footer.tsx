@@ -1,5 +1,6 @@
 // src/app/components/Footer.tsx
 import Link from 'next/link';
+import { Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,11 +13,18 @@ export default function Footer() {
             <p className="text-gray-300 mb-4">
               Professional cleaning & pest control services across Nairobi and surrounding counties.
             </p>
-            <p className="text-gray-300">
-              📞 +254 700 000 000<br />
-              ✉️ info@sipedo.co.ke
-            </p>
-          </div>
+            <div className="flex flex-col gap-1 text-gray-300">
+                <div className="flex items-center gap-2">
+                    <Phone size={16} />
+                    <span>+254 725 398 764</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Mail size={16} />
+                        <span>info@sipedo.co.ke</span>
+                        </div>
+                        </div>               
+        </div>                 
+
 
           {/* Quick Links */}
           <div>

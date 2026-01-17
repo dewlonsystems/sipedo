@@ -55,7 +55,7 @@ export default function ContactPage() {
             <div>
               <h3 className="text-2xl font-bold text-primary mb-6">Get in Touch</h3>
               <div className="space-y-4 text-gray-700">
-                <p>📞 <strong>Call Us:</strong> +254 700 000 000</p>
+                <p>📞 <strong>Call Us:</strong> +254 725 398 764</p>
                 <p>✉️ <strong>Email:</strong> info@sipedo.co.ke</p>
                 <p>🕒 <strong>Hours:</strong> Monday–Saturday, 7:00 AM – 6:00 PM</p>
                 <p>📍 <strong>Service Area:</strong> Nairobi, Kiambu, Kajiado, Thika</p>

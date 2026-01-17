@@ -1,5 +1,6 @@
 // src/app/about/page.tsx
 import Link from 'next/link';
+import { Phone, Mail, Clock, MapPin, Check } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -60,19 +61,19 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold mb-4">How We Work</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
+                  <Check size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0" />
                   <span><strong>Free Quote:</strong> Tell us your needs, get a transparent price.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
+                  <Check size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0" />
                   <span><strong>Trained Team:</strong> Certified, insured, and uniformed professionals.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
+                  <Check size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0" />
                   <span><strong>Eco-Friendly:</strong> Safe products for your family and pets.</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-primary mr-2">✓</span>
+                  <Check size={18} className="text-primary mt-0.5 mr-2 flex-shrink-0" />
                   <span><strong>100% Satisfaction:</strong> We don’t leave until you’re happy.</span>
                 </li>
               </ul>
@@ -80,10 +81,22 @@ export default function AboutPage() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Contact Details</h3>
               <div className="space-y-3 text-gray-700">
-                <p>📞 <strong>Phone:</strong> +254 700 000 000</p>
-                <p>✉️ <strong>Email:</strong> info@sipedo.co.ke</p>
-                <p>🕒 <strong>Hours:</strong> Mon–Sat, 7:00 AM – 6:00 PM</p>
-                <p>📍 <strong>Based in:</strong> Nairobi, Kenya</p>
+                <div className="flex items-center gap-2">
+                  <Phone size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Phone:</strong> +254 700 000 000</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Email:</strong> info@sipedo.co.ke</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Hours:</strong> Mon–Sat, 7:00 AM – 6:00 PM</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin size={18} className="text-gray-700 flex-shrink-0" />
+                  <span><strong>Based in:</strong> Nairobi, Kenya</span>
+                </div>
               </div>
             </div>
           </div>
