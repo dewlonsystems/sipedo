@@ -53,7 +53,7 @@ export default function TermsOfServicePage() {
 
         <h2 className="text-2xl font-bold text-primary mt-8 mb-4">7. Contact</h2>
         <p className="text-gray-700">
-          Questions? Reach us at: <strong>info@sipedo.co.ke</strong> or +254725 398 764.
+          Questions? Reach us at: <strong>info@sipedo.co.ke</strong> or +254 725 398 764.
         </p>
       </div>
     </div>
