@@ -38,6 +38,25 @@ const pestControlServices = [
     title: 'Rat & Rodent Control',
     description: 'Humane trapping, exclusion, and sanitation to eliminate rats and mice from your property.',
     image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/f20bc8da53e60cfe1cf6f3fe4eab6cd2edab6300/rat-control-solution.jpg'
+  },
+  // ✅ NEW SERVICES ADDED BELOW
+  {
+    id: 'snakes',
+    title: 'Snakes Control',
+    description: 'Safe, humane snake removal and prevention for homes in Nairobi — especially in green areas like Karen and Lang’ata.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/3f0ce696bf961fc18ff0da52d1100b97736ff5d2/snake%20control.jpg'
+  },
+  {
+    id: 'bats',
+    title: 'Bats Control',
+    description: 'Humane bat exclusion and attic cleanup — legal, safe, and effective for Nairobi homes.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/3f0ce696bf961fc18ff0da52d1100b97736ff5d2/Bat-in-my-house-1080x675.jpg'
+  },
+  {
+    id: 'bees',
+    title: 'Bees Control',
+    description: 'Eco-friendly bee hive removal and relocation — preserving pollinators while protecting your family.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/3f0ce696bf961fc18ff0da52d1100b97736ff5d2/bees.jpg'
   }
 ];
 

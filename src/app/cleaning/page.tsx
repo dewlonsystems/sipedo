@@ -1,7 +1,6 @@
 // src/app/cleaning/page.tsx
 import Link from 'next/link';
 
-// Define cleaning services data
 const cleaningServices = [
   {
     id: 'sofa-cleaning',
@@ -44,6 +43,31 @@ const cleaningServices = [
     title: 'Laundry & Dry Cleaning',
     description: 'Convenient pickup and delivery of laundry and dry cleaning services for homes and businesses in Nairobi.',
     image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/75ebdc334f6f5683d3df4c16e0eaede76fa09a17/images.jpg'
+  },
+  // ✅ NEW SERVICES ADDED BELOW
+  {
+    id: 'curtains-cleaning',
+    title: 'Curtains Cleaning',
+    description: 'Professional curtain cleaning that preserves fabric integrity while removing deep-seated dirt and allergens.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/66ad0ef79a97bc0f97ac73ac06d452279ec54f43/Curtains-And-Blinds-Cleaning-Services-In-Nairobi.jpg'
+  },
+  {
+    id: 'cabros-cleaning',
+    title: 'Cabros Cleaning',
+    description: 'Deep cleaning for car upholstery ("cabros") — removing stains, odors, and bacteria from seats and interiors.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/66ad0ef79a97bc0f97ac73ac06d452279ec54f43/cabro-pressure-washing.jpeg'
+  },
+  {
+    id: 'move-in-out-cleaning',
+    title: 'Move In/Out Cleaning',
+    description: 'Comprehensive cleaning for apartments and houses — ensuring you start fresh or leave spotless.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/66ad0ef79a97bc0f97ac73ac06d452279ec54f43/move-in-and-move-out-cleaning-checklist.jpg'
+  },
+  {
+    id: 'wooden-floor-polishing',
+    title: 'Wooden Floor Sanding & Polishing',
+    description: 'Restore your wooden floors to like-new condition with professional sanding, polishing, and sealing.',
+    image: 'https://raw.githubusercontent.com/dewlonsystems/sipedopics/66ad0ef79a97bc0f97ac73ac06d452279ec54f43/wooden.jpg'
   }
 ];
 
@@ -52,10 +76,13 @@ export default function CleaningServicesPage() {
     <>
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{ backgroundImage: "url('https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg')" }}
-        />
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://raw.githubusercontent.com/dewlonsystems/sipedopics/decb30fd253387f759f2b629bd5b6196afacf7e6/office%20cleaning.jpg"
+            alt="Professional Cleaning Services in Nairobi"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Cleaning Services</h1>
@@ -69,7 +96,7 @@ export default function CleaningServicesPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto mb-12">
-            At Sipedo Services, we understand that a clean space is a healthy, productive, and welcoming space. 
+            At Sipedo Services, we understand that a clean space is a healthy, productive and welcoming space. 
             That’s why we offer a full range of cleaning services tailored to your needs — from routine office maintenance 
             to deep post-renovation cleanup. All our technicians are trained, insured, and use eco-friendly products 
             safe for your family, pets, and environment.

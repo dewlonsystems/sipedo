@@ -13,6 +13,10 @@ const cleaningServices = [
   'car-interior',
   'post-construction',
   'laundry-dry-cleaning',
+  'curtains-cleaning',
+  'cabros-cleaning',
+  'move-in-out-cleaning',
+  'wooden-floor-polishing',
 ];
 
 const pestControlServices = [
@@ -22,6 +26,9 @@ const pestControlServices = [
   'fleas',
   'termites',
   'rats',
+  'snakes',
+  'bats',
+  'bees',
 ];
 
 export default function Navbar() {
