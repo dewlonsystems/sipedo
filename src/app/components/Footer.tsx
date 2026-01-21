@@ -36,7 +36,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Cleaning Services — FIXED */}
+          {/* Cleaning Services — UPDATED */}
           <div>
             <h4 className="font-semibold mb-4">Cleaning Services</h4>
             <ul className="space-y-2 text-gray-300">
@@ -47,7 +47,11 @@ export default function Footer() {
                 { name: 'Mattress', slug: 'mattress-cleaning' },
                 { name: 'Car Interior', slug: 'car-interior' },
                 { name: 'Post Construction', slug: 'post-construction' },
-                { name: 'Laundry & Dry Cleaning', slug: 'laundry-dry-cleaning' }
+                { name: 'Laundry & Dry Cleaning', slug: 'laundry-dry-cleaning' },
+                { name: 'Curtains Cleaning', slug: 'curtains-cleaning' },
+                { name: 'Cabros Cleaning', slug: 'cabros-cleaning' },
+                { name: 'Move In/Out Cleaning', slug: 'move-in-out-cleaning' },
+                { name: 'Wooden Floor Polishing', slug: 'wooden-floor-polishing' }
               ].map((service) => (
                 <li key={service.slug}>
                   <Link 
@@ -61,11 +65,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Pest Control Services */}
+          {/* Pest Control Services — UPDATED */}
           <div>
             <h4 className="font-semibold mb-4">Pest Control</h4>
             <ul className="space-y-2 text-gray-300">
-              {['bedbugs', 'cockroaches', 'mosquitoes', 'fleas', 'termites', 'rats'].map((p) => (
+              {[
+                'bedbugs',
+                'cockroaches',
+                'mosquitoes',
+                'fleas',
+                'termites',
+                'rats',
+                'snakes',
+                'bats',
+                'bees'
+              ].map((p) => (
                 <li key={p}>
                   <Link 
                     href={`/pest-control/${p}`} 
