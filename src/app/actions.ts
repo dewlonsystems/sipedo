@@ -28,7 +28,7 @@ export async function submitContactForm(
   try {
     await resend.emails.send({
       from: 'Sipedo Contact <info@sipedo.co.ke>',
-      to: 'ontitadmose@gmail.com',
+      to: 'geoffreyobiri641@gmail.com',
       subject: `New Service Request: ${service}`,
       html: `
         <h2>New Service Request</h2>
